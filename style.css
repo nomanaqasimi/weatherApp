@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Mono:wght@400;500&family=Hanken+Grotesk:wght@400;500;600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+--rule:rgba(27,42,122,.07);
+--dark:#090d38;
+--lightbox:#ffffff1f;
+transition: all 1s ease-in-out;
+}
+body{
+  background-color: var(--dark);
+  background-image: repeating-linear-gradient(to bottom,transparent 0 35px,var(--rule) 35px 37px);
+  color: #fff;
+  font-family: poppins, sans-serif;
+}
+header {
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem;
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  max-height: 100vh;
+  margin-top: 2rem;
+  background-color: var(--lightbox);
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: 'hanken grotesk', sans-serif;
+  text-align: center;
+}
+#city{
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin: 0.5rem  0 ;
+  font-family:'hanken grotesk', sans-serif;
+}
+#cityLable{
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+#searchBtn{
+  width: 40%;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  display: block;
+  margin: 0.5rem auto 0 auto;
+  font-family:'hanken grotesk', sans-serif;
+  font-weight: 600;
+  color:var(--dark)
+}
+#cityName{
+  font-size: 1.5rem;
+font-weight: bold;
+margin: 0.5rem;
+font-family:'bricolage grotesque', sans-serif;
+}
+#heading{
+  display: flex;
+  flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2rem;
+}
+#weather-det{
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+}
+#temp{
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+}
+#type{
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+}
+#hum-info{
+  display: flex;
+   flex-direction: row;
+gap:  0.5rem;
+align-items: center;
+
+}
+
+#wind-info{
+  display: flex;
+   flex-direction: row;
+   gap:  0.5rem;
+align-items: center;
+ 
+}
+#date{
+  font-size: 0.7rem;
+}
+#newSearch{
+  width: 30%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  display: block;
+  margin: 2rem auto 0 auto;
+  font-family:'hanken grotesk', sans-serif;
+  font-weight: 600;
+  color:var(--dark)
+}
+#weather-det{
+  gap: 1rem;
+  margin: 1rem 0;
+}
+#loading-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(to right, #14316b,#14316b88,#14316b4f);
+      -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 5px), black 0);
+      mask: radial-gradient(farthest-side, transparent calc(100% - 5px), black 0);
+      animation: spin 1s linear infinite;
+}
+#weather-icon {
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+#line{
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  margin: 0.5rem 0;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.hidden {
+    display: none !important;
+}

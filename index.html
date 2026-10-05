@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome!</h1>
+  </header>
+  <main>
+    <div class="container">
+        <section id="defaultState">
+            <label id="cityLable" for="city">Enter City Name:</label>
+            <input type="text" id="city" placeholder="e.g., New York">
+            <button id="searchBtn">Check Weather</button>
+        </section>
+        <section id="loadingState">
+            <div id="loading-icon"></div>
+        </section>
+        <section id="weatherState">
+            <div id="heading">
+                <p id="date"></p>
+                <h2 id="cityName"></h2>
+                <img id="weather-icon" src="" alt="weather icon">
+            </div>
+            <div id="line"></div>
+            <div id="weather-det">
+                <section id="main-info">
+                    <section id="temp">
+                    <i class="fa-solid fa-temperature-half"></i>
+                    <p id="temp-value"></p>
+                    </section>
+                    <section id="type">
+                        <i id = "typeIcon" class="fa-solid fa-cloud"></i>
+                    <p id="type-info"></p>
+                    </section>
+                </section>
+                <section id="otherinfo">
+                    <section id="hum-info">
+                        <i class="fa-solid fa-droplet"></i>
+                    <p id="humidity"></p>
+                    </section>
+                    <section id="wind-info">
+                        <i class="fa-solid fa-wind"></i>
+                    <p id="windSpeed"></p>
+                    </section>
+                </section>
+            </div>
+        </section>
+        <button id="newSearch">New Search</button>
+    </div>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
