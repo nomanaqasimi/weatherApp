@@ -142,7 +142,7 @@ tempValue.innerText = `${data.main.temp} °C`;
 type.innerText = data.weather[0].main;
 
 humidity.innerText = `${data.main.humidity} %`;
-windSpeed.innerText = `${data.wind.speed} km/h`;
+windSpeed.innerText = `${data.wind.speed} m/s`;
 if (weatherCondition === "Clear") {
    
     if (data.weather[0].icon.includes("n")) {
