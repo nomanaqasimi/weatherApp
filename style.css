@@ -16,16 +16,17 @@ body{
   font-family: poppins, sans-serif;
 }
 header {
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: center;
   padding: 1rem;
   font-family: 'Bricolage Grotesque', sans-serif;
+  margin: 2rem 0;
 }
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   height: 100vh;
 }
 .container{
@@ -36,16 +37,17 @@ main {
   width: 100%;
   max-width: 400px;
   height: 100%;
-  max-height: 100vh;
+  max-height: 50vh;
   margin-top: 2rem;
   background-color: var(--lightbox);
-  border-radius: 12px 12px 0 0;
+  border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   font-size: 0.8rem;
   font-weight: 500;
   font-family: 'hanken grotesk', sans-serif;
   text-align: center;
+  margin-top: 2rem;
 }
 #city{
   width: 100%;
@@ -58,7 +60,7 @@ main {
   font-family:'hanken grotesk', sans-serif;
 }
 #cityLable{
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 #searchBtn{
@@ -127,7 +129,7 @@ align-items: center;
   font-size: 0.7rem;
 }
 #newSearch{
-  width: 30%;
+  width: 40%;
   padding: 0.5rem;
   border: none;
   border-radius: 5px;
@@ -170,3 +172,19 @@ align-items: center;
 .hidden {
     display: none !important;
 }
+@media screen and (max-width: 400px) {
+  .container{
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    max-height: 40vh;
+    margin-top: 2rem;
+  }
+}
+
+  .transitions {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); 
+    transition: all 1s ease-in-out;
+  }

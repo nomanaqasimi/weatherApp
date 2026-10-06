@@ -42,8 +42,13 @@ async function checkWeather() {
     setTimeout(() => {
         loadingState.classList.add('hidden');
         weatherState.classList.remove('hidden');
+        setTimeout(() => {
+            weatherState.classList.add('transitions');
+        },10);
         newSearch.classList.remove('hidden');
+        
     }, 2300); 
+    
     const response = await fetch(url);
     const data = await response.json();
 
