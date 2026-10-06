@@ -19,6 +19,7 @@ A responsive web application that fetches and displays live weather data using t
 - Data provided by [OpenWeatherMap API](https://openweathermap.org/api).
   
  ##Screenshots
-- <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/ab1b5f6f-1738-4b83-85f8-8153b7cecc07" />
+<img width="1366" height="768" alt="Screenshot (201)" src="https://github.com/user-attachments/assets/63d592e5-3767-4322-857c-09be9fd7a75e" />
+
 <img width="1366" height="768" alt="Screenshot (202)" src="https://github.com/user-attachments/assets/f05d0745-59e3-49ea-b50a-e910feb8c298" />
 
