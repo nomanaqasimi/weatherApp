@@ -37,6 +37,11 @@ async function checkWeather() {
     loadingState.classList.remove('hidden'); 
 
     const cityName = inputField.value;
+    if (cityName === "") {
+        alert("Please enter a city name");
+        loadingState.classList.add('hidden');
+        window.location.reload();
+    }else{
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
     
     setTimeout(() => {
@@ -51,7 +56,13 @@ async function checkWeather() {
     
     const response = await fetch(url);
     const data = await response.json();
-
+    if(!response.ok){
+         loadingState.classList.add('hidden');
+        alert("City not found");
+       
+        window.location.reload();
+    }
+    }
 //------------test---------------------------------------
                                                       //|
     console.log(`weather : ${data.weather[0].main}`); //|
@@ -118,7 +129,9 @@ else {
     typeIcon.className = "fa-solid fa-smog"; 
 }
 
-}
+
 newSearch.addEventListener('click', function(){
     window.location.reload();
 });
+
+}
