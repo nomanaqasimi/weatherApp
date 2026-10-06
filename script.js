@@ -166,10 +166,16 @@ else if (weatherCondition === "Snow") {
 else {
     typeIcon.className = "fa-solid fa-smog"; 
 }
-
-
+    }
+}
 newSearch.addEventListener('click', function(){
     window.location.reload();
 });
+    
+
+inputField.addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        checkWeatherBtn.click();
     }
-}
+});
