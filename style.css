@@ -26,8 +26,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
-  height: 100vh;
+  min-height: 100vh;
+  width: 100vw;
 }
 .container{
   display: flex;
@@ -38,7 +38,6 @@ main {
   max-width: 400px;
   height: 100%;
   max-height: 50vh;
-  margin-top: 2rem;
   background-color: var(--lightbox);
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -172,15 +171,19 @@ align-items: center;
 .hidden {
     display: none !important;
 }
-@media screen and (max-width: 400px) {
-  .container{
-    width: 100%;
+  @media screen and (max-width: 400px) {
+  .container {
+    width: 90%;
     max-width: 300px;
-    height: 100%;
-    max-height: 40vh;
-    margin-top: 2rem;
+    height: auto;
+    min-height: 250px;
+    margin-top: 2rem ;
+    padding: 2rem 1rem;
+    justify-content: center;
+    align-items: center;
   }
 }
+
 
   .transitions {
     opacity: 1;

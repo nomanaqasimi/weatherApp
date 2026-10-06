@@ -62,7 +62,7 @@ async function checkWeather() {
        
         window.location.reload();
     }
-    }
+    
 //------------test---------------------------------------
                                                       //|
     console.log(`weather : ${data.weather[0].main}`); //|
@@ -77,21 +77,59 @@ let iconUrl = "";
 if (weatherCondition === "Clear") {
     if (iconCode.includes("n")) {
         iconUrl ="https://cdn-icons-png.flaticon.com/128/17798/17798728.png"; 
+        setTimeout(() => {
+        document.body.style.backgroundImage="url(images/05_clear_night.png)";
+        }, 1700);
     } else {
         iconUrl = "https://cdn-icons-png.flaticon.com/512/3222/3222800.png"; 
-    }
+        setTimeout(() => {
+        document.body.style.backgroundImage="url(images/01_clear_sunny.png)";
+    }, 1700);
+}
 } else if (weatherCondition === "Clouds") {
          if (iconCode.includes("n")) {
         iconUrl ="https://cdn-icons-png.flaticon.com/128/5146/5146187.png";
-            }else {
-        iconUrl = "https://cdn-icons-png.flaticon.com/512/414/414825.png"; 
-        }
+            setTimeout(() => {
+        document.body.style.backgroundImage="url(images/06_clouds_night.png)";
+            }, 1700);
+    }else {
+        iconUrl = "https://cdn-icons-png.flaticon.com/512/414/414825.png";
+        setTimeout(()=>{
+        document.body.style.backgroundImage="url(images/03_clouds.png)";
+        }, 1700);
+    }
  } else if (weatherCondition === "Rain" || weatherCondition === "Drizzle") {
     iconUrl = "https://cdn-icons-png.flaticon.com/128/2469/2469994.png"; 
+    setTimeout(()=>{
+    document.body.style.backgroundImage="url(images/02_rain.png)";
+    document.body.style.display="block";
+    document.body.style.backgroundSize="cover";
+
+},1700);
+
 } else if (weatherCondition === "Thunderstorm") {
-    iconUrl = "https://cdn-icons-png.flaticon.com/512/3313/3313888.png"; 
+    iconUrl = "https://cdn-icons-png.flaticon.com/512/3313/3313888.png";
+    setTimeout(()=>{
+    document.body.style.backgroundImage="url(images/04_thunderstorm.png)";
+      document.body.style.display="block";
+    document.body.style.backgroundSize="cover";
+    }, 1700);
 } else if (weatherCondition === "Snow") {
+    if(iconCode.includes("n")){
+         iconUrl = "https://cdn-icons-png.flaticon.com/512/2315/2315309.png"; 
+    setTimeout(()=>{
+    document.body.style.backgroundImage="url(images/08_snow_night.png)";
+      document.body.style.display="block";
+    document.body.style.backgroundSize="cover";
+    }, 1700);
+    }else{
     iconUrl = "https://cdn-icons-png.flaticon.com/512/2315/2315309.png"; 
+    setTimeout(()=>{
+    document.body.style.backgroundImage="url(images/07_snow.png)";
+      document.body.style.display="block";
+    document.body.style.backgroundSize="cover";
+    }, 1700);
+}
 } else {
     iconUrl = "https://cdn-icons-png.flaticon.com/512/414/414825.png"; 
 }
@@ -133,5 +171,5 @@ else {
 newSearch.addEventListener('click', function(){
     window.location.reload();
 });
-
+    }
 }
