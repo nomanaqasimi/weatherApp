@@ -79,11 +79,15 @@ if (weatherCondition === "Clear") {
         iconUrl ="https://cdn-icons-png.flaticon.com/128/17798/17798728.png"; 
         setTimeout(() => {
         document.body.style.backgroundImage="url(images/05_clear_night.png)";
-        }, 1700);
+            document.body.style.display="block";
+    document.body.style.backgroundSize="cover";
+    }, 1700);
     } else {
         iconUrl = "https://cdn-icons-png.flaticon.com/512/3222/3222800.png"; 
         setTimeout(() => {
         document.body.style.backgroundImage="url(images/01_clear_sunny.png)";
+            document.body.style.display="block";
+    document.body.style.backgroundSize="cover";
     }, 1700);
 }
 } else if (weatherCondition === "Clouds") {
@@ -91,12 +95,16 @@ if (weatherCondition === "Clear") {
         iconUrl ="https://cdn-icons-png.flaticon.com/128/5146/5146187.png";
             setTimeout(() => {
         document.body.style.backgroundImage="url(images/06_clouds_night.png)";
-            }, 1700);
+                document.body.style.display="block";
+    document.body.style.backgroundSize="cover";
+    }, 1700);
     }else {
         iconUrl = "https://cdn-icons-png.flaticon.com/512/414/414825.png";
         setTimeout(()=>{
         document.body.style.backgroundImage="url(images/03_clouds.png)";
-        }, 1700);
+            document.body.style.display="block";
+    document.body.style.backgroundSize="cover";
+    }, 1700);
     }
  } else if (weatherCondition === "Rain" || weatherCondition === "Drizzle") {
     iconUrl = "https://cdn-icons-png.flaticon.com/128/2469/2469994.png"; 
