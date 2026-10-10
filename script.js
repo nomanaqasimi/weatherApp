@@ -12,6 +12,7 @@ const humidity = document.getElementById('humidity');
 const windSpeed = document.getElementById('windSpeed');
 const typeIcon = document.getElementById('typeIcon');
 const newSearch = document.getElementById('newSearch');
+const box = document.getElementById('container');
 //-----------------------------------------------------
 const today = new Date();
 const formattedDate = today.toLocaleDateString("en-GB", {
@@ -88,6 +89,7 @@ if (weatherCondition === "Clear") {
         document.body.style.backgroundImage="url(images/01_clear_sunny.png)";
             document.body.style.display="block";
     document.body.style.backgroundSize="cover";
+    container.style.backgroundColor="var(--darkbox)";
     }, 1700);
 }
 } else if (weatherCondition === "Clouds") {
@@ -104,6 +106,8 @@ if (weatherCondition === "Clear") {
         document.body.style.backgroundImage="url(images/03_clouds.png)";
             document.body.style.display="block";
     document.body.style.backgroundSize="cover";
+       container.style.backgroundColor = "var(--darkbox)";
+
     }, 1700);
     }
  } else if (weatherCondition === "Rain" || weatherCondition === "Drizzle") {

@@ -7,6 +7,8 @@
 --rule:rgba(27,42,122,.07);
 --dark:#090d38;
 --lightbox:#ffffff1f;
+--darkbox:#1d131349;
+
 transition: all 1s ease-in-out;
 }
 body{
@@ -29,7 +31,7 @@ main {
   min-height: 100vh;
   width: 100vw;
 }
-.container{
+#container{
   display: flex;
   flex-direction: column;
   align-items: center;
